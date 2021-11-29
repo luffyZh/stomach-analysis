@@ -18,10 +18,10 @@
           <a-select-option value="programme1">
             抑酸药+粘膜保护剂
           </a-select-option>
-          <a-select-option value="programme2">
+          <a-select-option value="programme2" title="内镜下切除，切除后应用抑酸药及粘膜保护剂治疗">
             内镜下切除，切除后应用抑酸药及粘膜保护剂治疗
           </a-select-option>
-          <a-select-option value="programme3">
+          <a-select-option value="programme3" title="注意易消化饮食，避免饮酒辛辣刺激及质硬食物，去除诱因（如根除HP治疗），给予保护粘膜对症治疗">
             注意易消化饮食，避免饮酒辛辣刺激及质硬食物，去除诱因（如根除HP治疗），给予保护粘膜对症治疗
           </a-select-option>
           <a-select-option value="programme4">

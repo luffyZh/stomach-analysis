@@ -53,13 +53,13 @@
                 style="width: 220px"
                 @change="handleChange1"
               >
-                <a-select-option value="symptom1">
+                <a-select-option value="symptom1" title="餐后上腹痛，并发症为消化道出血">
                   餐后上腹痛，并发症为消化道出血
                 </a-select-option>
-                <a-select-option value="symptom2">
+                <a-select-option value="symptom2" title="内镜下表现为粘膜红白相间，以白为主，可透见粘膜下血管网，病理提示肠上皮化生，属于癌前病变">
                   内镜下表现为粘膜红白相间，以白为主，可透见粘膜下血管网，病理提示肠上皮化生，属于癌前病变
                 </a-select-option>
-                <a-select-option value="symptom3">
+                <a-select-option value="symptom3" title="内镜表现为食管粘膜条状糜烂及溃疡，临床表现为反酸烧心，常见并发症为出血，Barrett食管及癌变">
                   内镜表现为食管粘膜条状糜烂及溃疡，临床表现为反酸烧心，常见并发症为出血，Barrett食管及癌变
                 </a-select-option>
                 <a-select-option value="symptom4">
@@ -140,6 +140,10 @@ export default {
       this.$router.push({ path: "/step2" });
     },
     goStep4() {
+      if (this.activeIndex == 0) {
+        this.$message.error("请选择图片！");
+        return;
+      }
       sessionStorage.setItem("result", JSON.stringify(this.selObj));
       this.$router.push({ path: "/step4" });
     },
