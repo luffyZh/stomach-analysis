@@ -31,6 +31,7 @@ const columns = [
   {
     title: "位置定位",
     dataIndex: "position",
+    width:150,
     key: "position",
   },
 
@@ -47,6 +48,7 @@ const columns = [
   {
     title: "疗程",
     key: "course",
+    width:100,
     dataIndex: "course",
   },
   {
@@ -68,42 +70,42 @@ export default {
       scoreArr: [
         {
           id: 1, //图1
-          diagnosis: { key: "diagnosis1", score: 20 },
-          position: { key: "position4", score: 16 },
-          symptom: { key: "symptom1", score: 16 },
-          programme: { key: "programme1", score: 16 },
-          course: { key: "course1", score: 16 },
-          reviewTime: { key: "reviewTime1", score: 16 },
+          diagnosis: { key: "diagnosis1", score: 20,desc: "胃溃疡" },
+          position: { key: "position4", score: 16,desc: "胃角" },
+          symptom: { key: "symptom1", score: 16,desc: "餐后上腹痛，并发症为消化道出血"},
+          programme: { key: "programme1", score: 16,desc: "抑酸药+粘膜保护剂"},
+          course: { key: "course1", score: 16,desc: "6-8周" },
+          reviewTime: { key: "reviewTime1", score: 16,desc: "3个月复查胃镜"},
           desc: "胃溃疡：指发生于胃的局限缺损。原因可能是由于胃排空迟缓，胃窦潴留，释放促胃液素引起胃酸增加，形成溃疡。表现为中、上腹痛，无明确节律性与周期性。对抗酸药疗效差。基础酸不高或很低，癌变率为5%。 90%溃疡位于胃小弯侧。手术指征：①内科治疗3个月不愈合;②反复发作;③直径超过2cm的大溃疡;④未除外癌变;⑤并发梗阻、大出血、穿孔等。主张毕Ⅰ式胃大部分切除。疗效良好者在90%以上。",
         },
         {
           id: 2, //图2
-          diagnosis: { key: "diagnosis2", score: 20 },
-          position: { key: "position3", score: 16 },
-          symptom: { key: "symptom4", score: 16 },
-          programme: { key: "programme2", score: 16 },
-          course: { key: "course2", score: 16 },
-          reviewTime: { key: "reviewTime2", score: 16 },
+          diagnosis: { key: "diagnosis2", score: 20,desc: "胃息肉" },
+          position: { key: "position3", score: 16,desc: "胃底" },
+          symptom: { key: "symptom4", score: 16,desc: "无明显及特异临床表现" },
+          programme: { key: "programme2", score: 16,desc: "内镜下切除，切除后应用抑酸药及粘膜保护剂治疗" },
+          course: { key: "course2", score: 16,desc: "2-4周" },
+          reviewTime: { key: "reviewTime2", score: 16,desc: "半年复查胃镜" },
           desc: "胃息肉：突出于胃黏膜表面的良性增生组织团块。可以是肿瘤性、炎性和再生性或结构瘤性。①腺瘤性息肉，又称息肉性腺瘤或腺瘤，是上皮细胞的息肉状良性肿瘤;大片黏膜表面散布大量大小不等的息肉称为息肉病。腺瘤是一种癌前病变。②增生性腺瘤样息肉，占胃良性息肉的90%，多为单发，常见于萎缩性胃炎，其中90%患有胃酸缺乏。③炎性纤维样息肉，可能是一种局限形式的嗜酸性胃炎，单发或多发。胃息肉又可分为真性和假性两种，真性息肉即腺瘤;假性息肉即炎性息肉。真性息肉考虑其癌变，应手术治疗。",
         },
         {
           id: 3, //图3
-          diagnosis: { key: "diagnosis3", score: 20 },
-          position: { key: "position2", score: 16 },
-          symptom: { key: "symptom2", score: 16 },
-          programme: { key: "programme3", score: 16 },
-          course: { key: "course3", score: 16 },
-          reviewTime: { key: "reviewTime2", score: 16 },
+          diagnosis: { key: "diagnosis3", score: 20,desc: "萎缩性胃炎" },
+          position: { key: "position2", score: 16,desc: "胃窦" },
+          symptom: { key: "symptom2", score: 16, desc: "内镜下表现为粘膜红白相间，以白为主，可透见粘膜下血管网，病理提示肠上皮化生，属于癌前病变"},
+          programme: { key: "programme3", score: 16,desc: "注意易消化饮食，避免饮酒辛辣刺激及质硬食物，去除诱因（如根除HP治疗），给予保护粘膜对症治疗" },
+          course: { key: "course3", score: 16,desc: "1-2个月" },
+          reviewTime: { key: "reviewTime2", score: 16,desc: "半年复查胃镜"},
           desc: "萎缩性胃炎：本病以胃黏膜萎缩变薄,黏膜腺体减少或消失并伴有肠上皮化生,固有层内多量淋巴细胞、浆细胞浸润为特点。本型胃炎的病因较复杂,部分可能与吸烟、酗酒或用药不当有关;部分由非萎缩性胃炎迁延发展而来;还有部分属自身免疫病。患者可出现消化不良、食欲不佳、上腹部不适等症状。 根据发病是否与自身免疫有关以及是否伴有恶性贫血,将本型胃炎分为 A、B 两型 我国患者多属于 B 型。两型胃黏膜病变基本类似。肉眼观察（胃镜检查):胃黏膜由正常的橘红色变为灰色或灰绿色黏膜层变薄,皱襞变浅甚至消失,黏膜下血管清晰可见,偶有出血及糜烂。",
         },
         {
           id: 4, //图4
-          diagnosis: { key: "diagnosis4", score: 20 },
-          position: { key: "position1", score: 16 },
-          symptom: { key: "symptom3", score: 16 },
-          programme: { key: "programme4", score: 16 },
-          course: { key: "course4", score: 16 },
-          reviewTime: { key: "reviewTime1", score: 16 },
+          diagnosis: { key: "diagnosis4", score: 20,desc: "反流性食管炎" },
+          position: { key: "position1", score: 16,desc: "食管下段" },
+          symptom: { key: "symptom3", score: 16,desc: "内镜表现为食管粘膜条状糜烂及溃疡，临床表现为反酸烧心，常见并发症为出血，Barrett食管及癌变" },
+          programme: { key: "programme4", score: 16,desc: "注意饮食及体位避免反流诱因"},
+          course: { key: "course4", score: 16,desc: "8-12周" },
+          reviewTime: { key: "reviewTime1", score: 16,desc: "3个月复查胃镜"},
           desc: "反流性食管炎：反流性食管炎属于胃食管反流性疾病,是由于胃液反流至食管,引起食管下部黏膜慢性炎性改变。临床以胃灼热、胃内容物反流为突出症状,亦可出现疼痛、吞咽困难、呕血和黑便。有时临床症状的严重程度与食管炎的组织学改变程度并不一致。",
         },
       ],
@@ -174,7 +176,6 @@ export default {
       return item.id === resultObj.id;
     });
     let obj = selobj[0];
-    console.log(obj);
     this.suggest = obj.desc;
     //诊断得分
     if (obj.diagnosis.key === resultObj.diagnosis) {
@@ -232,7 +233,6 @@ export default {
       return item.key == resultObj.course;
     });
     let reviewTime = this.reviewTimeArr.filter((item) => {
-      console.log(item.key);
       return item.key == resultObj.reviewTime;
     });
     let objDesc = {
@@ -247,7 +247,19 @@ export default {
     };
     this.data.push(objDesc);
 
-    console.log(this.data);
+    //正确答案
+     let correctDesc = {
+      key: "2",
+      label: "正确答案",
+      position:obj.position.desc,
+      diagnosis:obj.diagnosis.desc,
+      symptom:obj.symptom.desc,
+      programme:obj.programme.desc,
+      course:obj.course.desc,
+      reviewTime:obj.reviewTime.desc,
+    };
+    this.data.push(correctDesc);
+
   },
 };
 </script>
