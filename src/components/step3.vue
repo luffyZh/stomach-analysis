@@ -9,6 +9,20 @@
       </div>
     </div>
     <div class="content-wrap">
+      <div class="left-wrap">
+         <div class="popup pos1" @click="clickBtn(4)">
+            <span><em></em></span>食管下段
+         </div>
+         <div class="popup pos2" @click="clickBtn(2)">
+            <span><em></em></span>胃底
+         </div>
+           <div class="popup pos3" @click="clickBtn(1)">
+            <span><em></em></span>胃角
+         </div>
+           <div class="popup pos4" @click="clickBtn(3)">
+            <span><em></em></span>胃窦
+         </div>
+      </div>
       <div class="right-wrap">
         <p class="sel-txt">请点击选择图片</p>
         <div class="pic-wrap">
@@ -118,6 +132,10 @@ export default {
     };
   },
   methods: {
+    clickBtn(num){
+      this.activeIndex=num
+      this.selObj.id = num;
+    },
     handleChange(val) {
       this.selObj.diagnosis = val;
     },
@@ -210,5 +228,94 @@ export default {
   justify-content: space-between;
   font-size: 16px;
   margin-bottom: 30px;
+}
+.left-wrap{
+  width: 400px;
+  height: 420px;
+  background: url('../assets/stomach.png');
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.popup{
+
+    width:100px;
+
+    background:#fc0;
+
+    padding:10px 20px;
+
+    color:#333;
+
+    border-radius:4px;
+
+    cursor: pointer;
+
+    border:1px solid #333;
+
+}
+.popup span{
+
+    display:block;
+
+    width:0;
+
+    height:0;
+
+    border-width:0 10px 10px;
+
+    border-style:solid;
+
+    border-color:transparent transparent #333;
+
+    position:absolute;
+
+    top:-10px;
+
+    left:50%;/* 三角形居中显示 */
+
+    margin-left:-10px;/* 三角形居中显示 */
+
+}
+.popup em{
+
+    display:block;
+
+    width:0;
+
+    height:0;
+
+    border-width:0 10px 10px;
+
+    border-style:solid;
+
+    border-color:transparent transparent #fc0;
+
+    position:absolute;
+
+    top:1px;
+
+    left:-10px;
+
+}
+.pos1{
+ position:absolute;
+    top:110px;
+    left:250px;
+}
+.pos2{
+ position:absolute;
+    top:94px;
+    left:118px;
+}
+.pos3{
+ position:absolute;
+    top:280px;
+    left:128px;
+}
+.pos4{
+ position:absolute;
+    top:330px;
+    left:248px;
 }
 </style>

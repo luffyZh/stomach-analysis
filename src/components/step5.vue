@@ -22,16 +22,18 @@ const columns = [
   {
     dataIndex: "label",
     key: "label",
+    width:100
   },
   {
     title: "疾病诊断",
     dataIndex: "diagnosis",
     key: "diagnosis",
+    width:150,
   },
   {
     title: "位置定位",
     dataIndex: "position",
-    width:150,
+    width:110,
     key: "position",
   },
 
@@ -55,6 +57,7 @@ const columns = [
     title: "复查时间",
     key: "reviewTime",
     dataIndex: "reviewTime",
+    width:150
   },
 ];
 
