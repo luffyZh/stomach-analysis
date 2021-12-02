@@ -232,7 +232,7 @@ export default {
 .left-wrap{
   width: 400px;
   height: 420px;
-  background: url('../assets/stomach.png');
+  background: url('https://raw.githubusercontent.com/woshixiaotuotuo/stomch/main/stomach.png');
   background-size: 100% 100%;
   position: relative;
 }
